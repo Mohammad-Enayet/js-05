@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Can Hide & Show HTML Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #d7d7d7;
+        }
+        .wrapper-div{
+            width: 600px;
+            background-color: rgb(62, 190, 2);
+            padding: 3rem;
+            border-radius: 10px;
+            border: 2px solid #333;
+            position: relative;
+        }
+        .wrapper-div h1{
+            font-size: 40px;
+            color: #fff;
+        }
+        .show-hide-box {
+            width: 150px;
+            height: 150px;
+            display: block;
+            background-color: rgb(89, 0, 255);
+            margin-inline: 20px;
+            border-radius: 5px;
+            color: #fff;
+            line-height: 150px;
+            font-size: 20px;
+            position: absolute;
+            bottom: -167px;
+            left: 260px;
+        }
+        .wrapper-div button[type='button']{
+            padding: 10px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            margin: 0px 20px;
+        }
+        .wrapper-div button[type='button']:hover{
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper-div">
+        <h1>JavaScript Show & Hide This Below Box</h1>
+
+        <button type="button" onclick="document.getElementById('showHideDiv').style.display='none'">Click to Hide</button>
+        <div id="showHideDiv" class="show-hide-box">Show/Hide</div>
+        <button type="button" onclick="document.getElementById('showHideDiv').style.display='block'">Click to Show</button>
+    </div>
+</body>
+</html>
